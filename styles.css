@@ -26,12 +26,12 @@ a { color: inherit; text-decoration: none; }
 .menu-button span:not(.sr-only) { background: var(--ink); display: block; height: 2px; margin: 4px; width: 24px; }
 .sr-only { clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
 
-.hero { align-items: center; background: radial-gradient(circle at 82% 34%, #f9dce0 0, #fae9e9 32%, #fff8f7 70%); display: grid; gap: clamp(30px, 5vw, 90px); grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr); min-height: 735px; overflow: hidden; padding: 38px clamp(24px, 6vw, 112px) 116px; position: relative; }
+.hero { align-items: center; background: radial-gradient(circle at 82% 34%, #f9dce0 0, #fae9e9 32%, #fff8f7 70%); display: grid; gap: clamp(30px, 5vw, 90px); grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.8fr); min-height: 765px; overflow: hidden; padding: 38px clamp(24px, 6vw, 112px) 116px; position: relative; }
 .hero-copy { max-width: 700px; position: relative; z-index: 1; }
-.hero-art { align-self: stretch; display: flex; justify-content: flex-end; min-height: 535px; padding: 18px 10px 0 0; position: relative; z-index: 1; }
-.hero-art::before { background: #f5bcc8; border-radius: 50%; content: ""; height: 365px; opacity: 0.56; position: absolute; right: 8%; top: 11%; width: 365px; }
-.hero-photo-frame { background: #fff9f8; border: 1px solid rgba(217, 80, 112, 0.22); border-radius: 210px 210px 24px 24px; box-shadow: 0 24px 50px rgba(107, 34, 56, 0.2); height: 515px; overflow: hidden; padding: 10px; position: relative; width: min(100%, 450px); }
-.hero-photo-frame img { border-radius: 198px 198px 17px 17px; height: 100%; object-fit: cover; object-position: center 39%; width: 100%; }
+.hero-art { align-self: stretch; display: flex; justify-content: center; min-height: 630px; padding: 12px 10px 0 0; position: relative; z-index: 1; }
+.hero-art::before { background: #f5bcc8; border-radius: 50%; content: ""; height: 410px; opacity: 0.56; position: absolute; right: 2%; top: 16%; width: 410px; }
+.hero-photo-frame { background: #fff9f8; border: 1px solid rgba(217, 80, 112, 0.22); border-radius: 180px 180px 24px 24px; box-shadow: 0 24px 50px rgba(107, 34, 56, 0.2); height: 610px; overflow: hidden; padding: 10px; position: relative; width: min(100%, 355px); }
+.hero-photo-frame img { border-radius: 170px 170px 17px 17px; height: 100%; object-fit: cover; object-position: center 50%; width: 100%; }
 .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; margin: 0 0 14px; text-transform: uppercase; }
 h1, h2, h3 { color: var(--ink); font-family: "Playfair Display", serif; margin: 0; }
 h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04em; line-height: 1.04; }
@@ -65,15 +65,16 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 .section-heading { align-items: end; display: flex; gap: 50px; justify-content: space-between; margin-bottom: 36px; }
 .section-heading h2 { font-size: clamp(33px, 4vw, 54px); font-weight: 500; line-height: 1.05; }
 .section-heading > p { line-height: 1.7; margin: 0; max-width: 360px; }
-.gallery-grid { display: grid; gap: 18px; grid-template-columns: 1.05fr 1fr 1fr; }
+.gallery-grid { display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .gallery-card { border-radius: 16px; margin: 0; overflow: hidden; position: relative; }
-.gallery-card::after { background: linear-gradient(transparent 60%, rgba(44, 13, 22, 0.74)); content: ""; inset: 0; position: absolute; }
-.gallery-card img { height: 310px; object-fit: cover; transition: transform 300ms ease; width: 100%; }
+.gallery-card::after { background: linear-gradient(transparent 57%, rgba(44, 13, 22, 0.76)); content: ""; inset: 0; position: absolute; }
+.gallery-card img { height: 350px; object-fit: cover; transition: transform 300ms ease; width: 100%; }
 .gallery-card:hover img { transform: scale(1.04); }
-.gallery-card-tall img { height: 310px; object-position: center 39%; }
-.gallery-card-glasses img { object-position: center 44%; }
-.gallery-card-shoes img { object-position: center 62%; }
-.gallery-card figcaption { bottom: 20px; color: white; font-family: "Playfair Display", serif; font-size: 21px; left: 22px; position: absolute; z-index: 1; }
+.gallery-card-glasses img { object-position: center 43%; }
+.gallery-card-soccer img { object-position: center 48%; }
+.gallery-card-play img { object-position: center 66%; }
+.gallery-card-shoes img { object-position: center 32%; }
+.gallery-card figcaption { bottom: 20px; color: white; font-family: "Playfair Display", serif; font-size: 19px; left: 19px; position: absolute; z-index: 1; }
 
 .order-section { background: #fff3f1; padding: 105px 0; text-align: center; }
 .order-section h2 { font-size: clamp(35px, 4vw, 56px); font-weight: 500; }
@@ -116,15 +117,15 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .main-nav a { padding: 12px 0; }
   .hero { display: block; min-height: 0; padding: 82px 24px 94px; }
   .hero-copy { max-width: 620px; }
-  .hero-art { align-items: center; justify-content: center; margin-top: 36px; min-height: 460px; padding: 0; }
-  .hero-photo-frame { height: 450px; width: min(100%, 410px); }
+  .hero-art { align-items: center; justify-content: center; margin-top: 36px; min-height: 570px; padding: 0; }
+  .hero-photo-frame { height: 560px; width: min(100%, 325px); }
   .benefits, .gallery-grid, .order-steps, .story, .contact-section, .price-grid { grid-template-columns: 1fr; }
   .benefits { margin-top: -35px; }
   .story { padding-bottom: 82px; padding-top: 82px; }
   .story-image-wrap { max-width: 440px; }
   .section-heading { align-items: start; flex-direction: column; gap: 16px; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-card img, .gallery-card-tall img { height: 340px; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-card img { height: 360px; }
   .featured-price { transform: none; }
   .order-steps article:not(:last-child)::after { display: none; }
   .order-steps { margin-top: 40px; }
@@ -134,13 +135,15 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 @media (max-width: 520px) {
   .brand { font-size: 22px; }
   .hero { padding: 66px 24px 78px; }
-  .hero-art { min-height: 390px; }
-  .hero-photo-frame { height: 390px; width: min(100%, 350px); }
+  .hero-art { min-height: 520px; }
+  .hero-photo-frame { height: 510px; width: min(100%, 295px); }
   h1 { font-size: 48px; }
   .hero-intro { font-size: 15px; max-width: 315px; }
   .hero-ornament { width: 270px; }
   .hero-ornament::before, .hero-ornament::after { width: 86px; }
   .button { font-size: 14px; padding: 14px 17px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-card img { height: 340px; }
   .section-shell { padding-left: 20px; padding-right: 20px; }
   .benefits { padding-left: 20px; padding-right: 20px; }
   .benefit-card h2 { font-size: 19px; }
