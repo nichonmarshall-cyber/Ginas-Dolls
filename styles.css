@@ -26,8 +26,8 @@ a { color: inherit; text-decoration: none; }
 .menu-button span:not(.sr-only) { background: var(--ink); display: block; height: 2px; margin: 4px; width: 24px; }
 .sr-only { clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
 
-.hero { background: #fae9e9; min-height: 685px; overflow: hidden; position: relative; }
-.hero-image { height: 100%; inset: 0; object-fit: cover; object-position: center; position: absolute; width: 100%; }
+.hero { background: #fae9e9; height: clamp(725px, 47vw, 780px); min-height: 725px; overflow: hidden; position: relative; }
+.hero-image { height: 100%; inset: 0; object-fit: cover; object-position: 76% 48%; position: absolute; width: 100%; }
 .hero-wash { background: linear-gradient(90deg, rgba(255, 247, 246, 0.99) 0%, rgba(255, 247, 246, 0.94) 37%, rgba(255, 247, 246, 0.2) 64%, rgba(255, 247, 246, 0) 100%); inset: 0; position: absolute; }
 .hero-copy { max-width: 700px; padding: 128px 0 165px clamp(24px, 6vw, 112px); position: relative; z-index: 1; }
 .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; margin: 0 0 14px; text-transform: uppercase; }
@@ -53,7 +53,7 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 
 .story { align-items: center; display: grid; gap: clamp(38px, 7vw, 100px); grid-template-columns: 0.85fr 1fr; padding-bottom: 120px; padding-top: 120px; }
 .story-image-wrap { background: var(--pink); border-radius: 180px 180px 20px 20px; overflow: hidden; padding: 14px; }
-.story-image-wrap img { border-radius: 166px 166px 12px 12px; height: 435px; object-fit: cover; object-position: center 60%; width: 100%; }
+.story-image-wrap img { border-radius: 166px 166px 12px 12px; height: 435px; object-fit: cover; object-position: center 34%; width: 100%; }
 .story-copy h2 { font-size: clamp(32px, 4vw, 51px); font-weight: 500; line-height: 1.11; }
 .story-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.8; margin: 25px 0; max-width: 560px; }
 .text-link { color: var(--rose); font-size: 15px; font-weight: 700; }
@@ -63,12 +63,17 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 .section-heading { align-items: end; display: flex; gap: 50px; justify-content: space-between; margin-bottom: 36px; }
 .section-heading h2 { font-size: clamp(33px, 4vw, 54px); font-weight: 500; line-height: 1.05; }
 .section-heading > p { line-height: 1.7; margin: 0; max-width: 360px; }
-.gallery-grid { display: grid; gap: 18px; grid-template-columns: 1.05fr 1fr 1fr; }
+.gallery-grid { display: grid; gap: 18px; grid-template-columns: 1.1fr 1fr 1fr; grid-template-rows: repeat(2, 230px); }
 .gallery-card { border-radius: 16px; margin: 0; overflow: hidden; position: relative; }
-.gallery-card::after { background: linear-gradient(transparent 60%, rgba(44, 13, 22, 0.74)); content: ""; inset: 0; position: absolute; }
-.gallery-card img { height: 310px; object-fit: cover; transition: transform 300ms ease; width: 100%; }
+.gallery-card::after { background: linear-gradient(transparent 55%, rgba(44, 13, 22, 0.78)); content: ""; inset: 0; position: absolute; }
+.gallery-card img { height: 100%; object-fit: cover; transition: transform 300ms ease; width: 100%; }
 .gallery-card:hover img { transform: scale(1.04); }
-.gallery-card-tall img { object-position: center 50%; }
+.gallery-card-tall { grid-row: span 2; }
+.gallery-card-boys img { object-position: center 39%; }
+.gallery-card-glasses img { object-position: center 46%; }
+.gallery-card-shoes img { object-position: center 62%; }
+.gallery-card-redhair img { object-position: 80% 49%; }
+.gallery-card-chair img { object-position: center 31%; }
 .gallery-card figcaption { bottom: 20px; color: white; font-family: "Playfair Display", serif; font-size: 21px; left: 22px; position: absolute; z-index: 1; }
 
 .order-section { background: #fff3f1; padding: 105px 0; text-align: center; }
@@ -110,7 +115,7 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .main-nav { background: var(--cream); border-bottom: 1px solid var(--line); box-shadow: 0 12px 18px rgba(67, 22, 37, 0.08); display: none; left: 0; padding: 12px 24px 20px; position: absolute; right: 0; top: 100%; }
   .main-nav.open { display: grid; gap: 0; }
   .main-nav a { padding: 12px 0; }
-  .hero { min-height: 640px; }
+  .hero { height: 800px; min-height: 800px; }
   .hero-wash { background: linear-gradient(90deg, rgba(255, 247, 246, 0.97), rgba(255, 247, 246, 0.72), rgba(255, 247, 246, 0.1)); }
   .hero-copy { padding: 92px 24px 150px; }
   .benefits, .gallery-grid, .order-steps, .story, .contact-section, .price-grid { grid-template-columns: 1fr; }
@@ -118,9 +123,10 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .story { padding-bottom: 82px; padding-top: 82px; }
   .story-image-wrap { max-width: 440px; }
   .section-heading { align-items: start; flex-direction: column; gap: 16px; }
-  .gallery-card img { height: 340px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(2, 300px); }
+  .gallery-card { min-height: 300px; }
+  .gallery-card-tall { grid-row: span 2; }
   .featured-price { transform: none; }
-  .gallery-card-tall img { object-position: center 32%; }
   .order-steps article:not(:last-child)::after { display: none; }
   .order-steps { margin-top: 40px; }
   .contact-section { gap: 40px; padding-bottom: 75px; padding-top: 75px; }
@@ -128,14 +134,17 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 
 @media (max-width: 520px) {
   .brand { font-size: 22px; }
-  .hero { min-height: 610px; }
-  .hero-image { object-position: 62% center; }
+  .hero { height: 745px; min-height: 745px; }
+  .hero-image { object-position: 72% 48%; }
   .hero-wash { background: linear-gradient(90deg, rgba(255, 247, 246, 0.99) 0%, rgba(255, 247, 246, 0.9) 51%, rgba(255, 247, 246, 0.2) 100%); }
   h1 { font-size: 48px; }
   .hero-intro { font-size: 15px; max-width: 315px; }
   .hero-ornament { width: 270px; }
   .hero-ornament::before, .hero-ornament::after { width: 86px; }
   .button { font-size: 14px; padding: 14px 17px; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+  .gallery-card, .gallery-card-tall { height: 325px; min-height: 0; }
+  .gallery-card-tall { grid-row: auto; }
   .section-shell { padding-left: 20px; padding-right: 20px; }
   .benefits { padding-left: 20px; padding-right: 20px; }
   .benefit-card h2 { font-size: 19px; }
