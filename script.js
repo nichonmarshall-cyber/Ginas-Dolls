@@ -24,3 +24,14 @@ document.querySelector('#order-form').addEventListener('submit', (event) => {
   );
   window.location.href = `mailto:yaninacorrea110@gmail.com?subject=${subject}&body=${body}`;
 });
+
+
+const heroImage = document.querySelector('#hero-doll');
+const useHeroFallback = () => {
+  if (!heroImage.dataset.fallback) return;
+  const fallback = heroImage.dataset.fallback;
+  delete heroImage.dataset.fallback;
+  heroImage.src = fallback;
+};
+heroImage.addEventListener('error', useHeroFallback);
+if (heroImage.complete && heroImage.naturalWidth === 0) useHeroFallback();

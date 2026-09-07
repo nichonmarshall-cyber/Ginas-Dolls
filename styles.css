@@ -28,10 +28,10 @@ a { color: inherit; text-decoration: none; }
 
 .hero { align-items: center; background: radial-gradient(circle at 82% 34%, #f9dce0 0, #fae9e9 32%, #fff8f7 70%); display: grid; gap: clamp(30px, 5vw, 90px); grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.8fr); min-height: 765px; overflow: hidden; padding: 38px clamp(24px, 6vw, 112px) 116px; position: relative; }
 .hero-copy { max-width: 700px; position: relative; z-index: 1; }
-.hero-art { align-self: stretch; display: flex; justify-content: center; min-height: 630px; padding: 12px 10px 0 0; position: relative; z-index: 1; }
-.hero-art::before { background: #f5bcc8; border-radius: 50%; content: ""; height: 410px; opacity: 0.56; position: absolute; right: 2%; top: 16%; width: 410px; }
-.hero-photo-frame { background: #fff9f8; border: 1px solid rgba(217, 80, 112, 0.22); border-radius: 180px 180px 24px 24px; box-shadow: 0 24px 50px rgba(107, 34, 56, 0.2); height: 610px; overflow: hidden; padding: 10px; position: relative; width: min(100%, 355px); }
-.hero-photo-frame img { border-radius: 170px 170px 17px 17px; height: 100%; object-fit: cover; object-position: center 50%; width: 100%; }
+.hero-art { align-self: center; display: flex; justify-content: center; min-width: 0; position: relative; z-index: 1; }
+.hero-art::before { display: none; }
+.hero-photo-frame { background: var(--pink); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; width: min(100%, 410px); aspect-ratio: 2 / 3; }
+.hero-photo-frame img { width: 100%; height: 100%; object-fit: contain; }
 .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; margin: 0 0 14px; text-transform: uppercase; }
 h1, h2, h3 { color: var(--ink); font-family: "Playfair Display", serif; margin: 0; }
 h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04em; line-height: 1.04; }
@@ -54,8 +54,8 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 .benefit-card p { font-size: 13px; margin: 4px 0 0; }
 
 .story { align-items: center; display: grid; gap: clamp(38px, 7vw, 100px); grid-template-columns: 0.85fr 1fr; padding-bottom: 120px; padding-top: 120px; }
-.story-image-wrap { background: var(--pink); border-radius: 180px 180px 20px 20px; overflow: hidden; padding: 14px; }
-.story-image-wrap img { border-radius: 166px 166px 12px 12px; height: 435px; object-fit: cover; object-position: center 43%; transform: scale(1.28); width: 100%; }
+.story-image-wrap { background: var(--pink); border-radius: 12px; overflow: hidden; width: min(100%, 360px); justify-self: center; }
+.story-image-wrap img { height: auto; width: 100%; }
 .story-copy h2 { font-size: clamp(32px, 4vw, 51px); font-weight: 500; line-height: 1.11; }
 .story-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.8; margin: 25px 0; max-width: 560px; }
 .text-link { color: var(--rose); font-size: 15px; font-weight: 700; }
@@ -65,19 +65,18 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 .section-heading { align-items: end; display: flex; gap: 50px; justify-content: space-between; margin-bottom: 36px; }
 .section-heading h2 { font-size: clamp(33px, 4vw, 54px); font-weight: 500; line-height: 1.05; }
 .section-heading > p { line-height: 1.7; margin: 0; max-width: 360px; }
-.gallery-grid { display: grid; gap: 44px 24px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
-.gallery-card { margin: 0; }
-.gallery-card img { box-shadow: 0 14px 30px rgba(107, 34, 56, 0.11); height: 410px; object-fit: cover; transition: transform 300ms ease; width: 100%; }
-.gallery-card:hover img { transform: translateY(-5px); }
-.gallery-card-glasses { grid-column: span 5; }
-.gallery-card-soccer { grid-column: span 7; }
-.gallery-card-play { grid-column: span 7; }
-.gallery-card-shoes { grid-column: span 5; }
-.gallery-card-glasses img { object-position: center 43%; }
-.gallery-card-soccer img { object-position: center 48%; }
-.gallery-card-play img { object-position: center 64%; }
-.gallery-card-shoes img { object-position: center 31%; }
-.gallery-card figcaption { color: var(--ink); font-family: "Playfair Display", serif; font-size: 21px; margin-top: 13px; }
+/* Full product portraits with quiet captions. */
+.gallery-grid { display: grid; gap: 32px 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gallery-card, .craft-grid figure { margin: 0; min-width: 0; }
+.gallery-photo { display: block; aspect-ratio: 3 / 4; background: #f8eeec; overflow: hidden; border-radius: 4px; }
+.gallery-card img { width: 100%; height: 100%; object-fit: contain; transition: transform 250ms ease; }
+.gallery-photo:hover img { transform: scale(1.025); }
+.gallery-card figcaption, .craft-grid figcaption { color: #77505d; font-family: "DM Sans", sans-serif; font-size: 14px; margin-top: 10px; line-height: 1.5; }
+.craft-details { border-top: 1px solid var(--line); margin-top: 60px; padding-top: 32px; }
+.craft-details h3 { font-size: 26px; font-weight: 500; margin-bottom: 24px; }
+.craft-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.craft-photo { display: block; background: #f8eeec; aspect-ratio: 1; overflow: hidden; border-radius: 4px; }
+.craft-photo img { width: 100%; height: 100%; object-fit: contain; }
 
 .order-section { background: #fff3f1; padding: 105px 0; text-align: center; }
 .order-section h2 { font-size: clamp(35px, 4vw, 56px); font-weight: 500; }
@@ -120,8 +119,8 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .main-nav a { padding: 12px 0; }
   .hero { display: block; min-height: 0; padding: 82px 24px 94px; }
   .hero-copy { max-width: 620px; }
-  .hero-art { align-items: center; justify-content: center; margin-top: 36px; min-height: 570px; padding: 0; }
-  .hero-photo-frame { height: 560px; width: min(100%, 325px); }
+  .hero-art { align-items: center; justify-content: center; margin-top: 36px; min-height: 0; padding: 0; }
+  .hero-photo-frame { width: min(100%, 390px); }
   .benefits, .gallery-grid, .order-steps, .story, .contact-section, .price-grid { grid-template-columns: 1fr; }
   .benefits { margin-top: -35px; }
   .story { padding-bottom: 82px; padding-top: 82px; }
@@ -129,7 +128,7 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .section-heading { align-items: start; flex-direction: column; gap: 16px; }
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 18px; }
   .gallery-card-glasses, .gallery-card-soccer, .gallery-card-play, .gallery-card-shoes { grid-column: auto; }
-  .gallery-card img { height: 360px; }
+  
   .featured-price { transform: none; }
   .order-steps article:not(:last-child)::after { display: none; }
   .order-steps { margin-top: 40px; }
@@ -139,17 +138,36 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 @media (max-width: 520px) {
   .brand { font-size: 22px; }
   .hero { padding: 66px 24px 78px; }
-  .hero-art { min-height: 520px; }
-  .hero-photo-frame { height: 510px; width: min(100%, 295px); }
+  .hero-art { min-height: 0; }
+  .hero-photo-frame { width: min(100%, 330px); }
   h1 { font-size: 48px; }
   .hero-intro { font-size: 15px; max-width: 315px; }
   .hero-ornament { width: 270px; }
   .hero-ornament::before, .hero-ornament::after { width: 86px; }
   .button { font-size: 14px; padding: 14px 17px; }
   .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-card img { height: 340px; }
+  .craft-grid { grid-template-columns: 1fr; }
+  .hero-intro { font-size: 16px; }
+  
   .section-shell { padding-left: 20px; padding-right: 20px; }
   .benefits { padding-left: 20px; padding-right: 20px; }
   .benefit-card h2 { font-size: 19px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 8px; padding: 22px 24px; }
 }
+
+
+section[id] { scroll-margin-top: 90px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .gallery-card img { transition: none; }
+  .button:hover, .gallery-photo:hover img { transform: none; }
+}
+
+.gallery-photo-glasses { aspect-ratio: 710 / 1064; }
+.gallery-photo-glasses img { height: auto; max-width: none; transform: translateY(-15.36%); }
+.gallery-photo-glasses:hover img { transform: translateY(-15.36%); }
+.craft-photo-process { aspect-ratio: 710 / 680; }
+.craft-photo-process img { height: auto; transform: translateY(-18.49%); }
+.craft-photo-shoes { aspect-ratio: 710 / 440; }
+.craft-photo-shoes img { height: auto; transform: translateY(-33.85%); }

@@ -50,7 +50,7 @@
         </div>
         <div class="hero-art">
           <div class="hero-photo-frame">
-            <img src="assets/red-haired-hero-boutique.png" alt="Handmade red-haired doll and blond boy with a sunflower in a blush pink boutique setting" />
+            <img id="hero-doll" src="assets/pink-doll-hero.webp" data-fallback="assets/pink-polka-doll.webp" alt="Handmade brunette doll in a pink polka-dot dress holding a yellow duck" width="1024" height="1536" fetchpriority="high" decoding="async" />
           </div>
         </div>
         <svg class="hero-wave" viewBox="0 0 1440 118" preserveAspectRatio="none" aria-hidden="true">
@@ -75,10 +75,10 @@
 
       <section id="story" class="story section-shell">
         <div class="story-image-wrap">
-          <img src="assets/curly-glasses-story.jpeg" alt="Handmade doll with curly hair, glasses, and custom overalls" />
+          <img src="assets/portrait-gina.webp" alt="Gina holding her handmade blonde doll in her craft studio" width="864" height="1536" loading="lazy" decoding="async" />
         </div>
         <div class="story-copy">
-          <p class="eyebrow">Made from an idea</p>
+          <p class="eyebrow">Meet the maker</p>
           <h2>Every doll has a little personality of its own.</h2>
           <p>
             Gina's Creation Dolls brings an idea to life through handmade dolls, clothing, shoes, and accessories. Every custom piece is created with care so it feels personal from the hair down to the smallest details.
@@ -89,26 +89,93 @@
 
       <section id="gallery" class="gallery section-shell">
         <div class="section-heading">
-          <div><p class="eyebrow">A few creations</p><h2>Made with the details in mind</h2></div>
-          <p>From expressive hair to tiny shoes and custom outfits, every piece is part of the story.</p>
+          <div><p class="eyebrow">The gallery</p><h2>Little details. Lots of personality.</h2></div>
+          <p>A look at Gina's handmade dolls and their custom outfits. Tap a photo for a closer look.</p>
         </div>
         <div class="gallery-grid">
-          <figure class="gallery-card gallery-card-glasses">
-            <img src="assets/curly-glasses-studio.jpeg" alt="Handmade doll with curly hair, glasses, and a custom outfit" loading="lazy" />
-            <figcaption>Hair and outfit details</figcaption>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/pink-polka-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/pink-polka-doll.webp" alt="Brunette yarn-haired doll wearing a pink polka-dot dress and glitter shoes, holding a yellow duck" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Pink polka dots</figcaption>
           </figure>
-          <figure class="gallery-card gallery-card-soccer">
-            <img src="assets/boy-soccer.jpeg" alt="Handmade boy doll with a striped shirt, sneakers, and a soccer ball" loading="lazy" />
-            <figcaption>Custom characters</figcaption>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/braided-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/braided-doll.webp" alt="Dark-skinned handmade doll with beaded black braids, a purple butterfly dress, and colorful shoes" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Beaded braids</figcaption>
           </figure>
-          <figure class="gallery-card gallery-card-play">
-            <img src="assets/boys-at-play.jpeg" alt="Two handmade boy dolls playing together" loading="lazy" />
-            <figcaption>Made for every story</figcaption>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/basketball-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/basketball-doll.webp" alt="Handmade boy doll in a dinosaur shirt and camouflage shorts holding a crocheted basketball" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Basketball buddy</figcaption>
           </figure>
-          <figure class="gallery-card gallery-card-shoes">
-            <img src="assets/shoe-making.jpeg" alt="Close-up of a handmade doll shoe in the making" loading="lazy" />
-            <figcaption>Handmade down to the shoes</figcaption>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/red-floral-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/red-floral-doll.webp" alt="Red-haired handmade doll wearing a floral dress and holding a crocheted animal" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Red curls &amp; florals</figcaption>
           </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/pigtail-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/pigtail-doll.webp" alt="Handmade doll with two-tone yarn pigtails, a floral top, striped pants, and pink sneakers" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Pigtails &amp; stripes</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/copper-curls-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/copper-curls-doll.webp" alt="Copper-haired doll with an owl top, layered pink skirt, and handmade sneakers beside a crocheted sunflower" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Copper curls</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/soccer-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/soccer-doll.webp" alt="Boy doll with black curly hair, a striped shirt, denim shorts, and a crocheted soccer ball" width="888" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Soccer style</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/purple-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/purple-doll.webp" alt="Black-haired doll with a purple bow, layered lilac dress, and crocheted purple vest" width="960" height="1407" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Layers of lilac</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo" href="assets/blond-doll.webp" target="_blank" rel="noopener">
+              <img src="assets/blond-doll.webp" alt="Seated blond boy doll in a dinosaur shirt holding a crocheted soccer ball" width="1200" height="1600" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Little dinosaur</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <a class="gallery-photo gallery-photo-glasses" href="assets/glasses-overalls.webp" target="_blank" rel="noopener">
+              <img src="assets/glasses-overalls.webp" alt="Golden-haired doll with black glasses, denim overalls, and lace-up shoes" width="710" height="1536" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>Glasses &amp; overalls</figcaption>
+          </figure>
+        </div>
+        <div class="craft-details">
+          <h3>From fabric to finishing touches</h3>
+          <div class="craft-grid">
+            <figure>
+              <a class="craft-photo craft-photo-materials" href="assets/materials.webp" target="_blank" rel="noopener">
+                <img src="assets/materials.webp" alt="Three rolls of doll-making fabric in different tones" width="960" height="1043" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Doll fabrics</figcaption>
+            </figure>
+            <figure>
+              <a class="craft-photo craft-photo-process" href="assets/shoe-process.webp" target="_blank" rel="noopener">
+                <img src="assets/shoe-process.webp" alt="A small doll shoe being assembled by hand on the work table" width="710" height="1536" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>In the making</figcaption>
+            </figure>
+            <figure>
+              <a class="craft-photo craft-photo-shoes" href="assets/finished-shoes.webp" target="_blank" rel="noopener">
+                <img src="assets/finished-shoes.webp" alt="Finished tan and cream lace-up doll shoes" width="710" height="1536" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Handmade shoes</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
