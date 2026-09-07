@@ -109,7 +109,18 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
 .contact-form label { display: grid; font-size: 13px; font-weight: 700; gap: 7px; }
 .contact-form input, .contact-form textarea { background: #fff9f8; border: 1px solid #e8c9ce; border-radius: 6px; color: #3b2630; font: inherit; padding: 11px; resize: vertical; }
 .form-note { color: #77505d; font-size: 12px; margin: -6px 0 0; text-align: center; }
-.site-footer { align-items: center; background: #4f172a; color: #f4d8dd; display: flex; font-size: 13px; justify-content: space-between; padding: 22px max(28px, calc((100vw - 1184px) / 2)); }
+.site-footer { align-items: center; background: #4f172a; color: #f4d8dd; display: flex; font-size: 13px; gap: 18px; justify-content: space-between; padding: 22px max(28px, calc((100vw - 1184px) / 2)); }
+.footer-links { align-items: center; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: flex-end; }
+.footer-links a { text-decoration: underline; text-decoration-color: rgba(244, 216, 221, 0.45); text-underline-offset: 3px; }
+.footer-links a:hover { color: white; text-decoration-color: white; }
+.footer-links .ntx-credit { color: #ffd4a2; font-weight: 700; }
+.legal-home-link { color: var(--rose); font-size: 14px; font-weight: 700; }
+.legal-page { max-width: 820px; padding-bottom: 90px; padding-top: 85px; }
+.legal-page h1 { font-size: clamp(42px, 6vw, 70px); font-weight: 500; margin-bottom: 10px; }
+.legal-page h2 { font-size: 27px; font-weight: 600; margin: 40px 0 12px; }
+.legal-page p { font-size: 16px; line-height: 1.8; margin: 0 0 18px; }
+.legal-page a { color: var(--rose); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.legal-updated { color: #77505d; font-size: 14px !important; margin-bottom: 38px !important; }
 
 @media (max-width: 850px) {
   .site-header { min-height: 67px; padding: 9px 24px; }
@@ -152,7 +163,8 @@ h1 { font-size: clamp(50px, 6vw, 83px); font-weight: 500; letter-spacing: -0.04e
   .section-shell { padding-left: 20px; padding-right: 20px; }
   .benefits { padding-left: 20px; padding-right: 20px; }
   .benefit-card h2 { font-size: 19px; }
-  .site-footer { align-items: flex-start; flex-direction: column; gap: 8px; padding: 22px 24px; }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: 10px; padding: 22px 24px; }
+  .footer-links { justify-content: flex-start; }
 }
 
 
