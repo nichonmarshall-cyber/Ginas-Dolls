@@ -184,6 +184,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
 .craft-photo-shoes { aspect-ratio: 710 / 440; }
 .craft-photo-shoes img { height: auto; transform: translateY(-33.85%); }
 
+/* Keep the new shoe portraits clean inside the existing square cards. */
+.craft-photo-process,
+.craft-photo-shoes { aspect-ratio: 1; }
+.craft-photo-process img,
+.craft-photo-shoes img { height: 100%; object-fit: cover; transform: none; }
+
 /* A furnished room spans the hero, with real HTML copy above it. */
 .hero { display: flex; min-height: 720px; padding: 80px clamp(24px, 6vw, 112px) 130px; background: #f9e7e3; }
 .hero .hero-copy { width: 48%; max-width: 660px; z-index: 3; }
