@@ -15,16 +15,6 @@ navigation.querySelectorAll('a').forEach((link) => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-document.querySelector('#order-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = encodeURIComponent(`Custom Doll Request from ${data.get('name')}`);
-  const body = encodeURIComponent(
-    `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nCustom doll idea:\n${data.get('idea')}`
-  );
-  window.location.href = `mailto:yaninacorrea110@gmail.com?subject=${subject}&body=${body}`;
-});
-
 
 const heroImage = document.querySelector('#hero-doll');
 const useHeroFallback = () => {
