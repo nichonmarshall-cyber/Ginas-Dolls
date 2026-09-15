@@ -1,3 +1,7 @@
+if (window.location.hostname === 'nichonmarshall-cyber.github.io') {
+  window.location.replace('https://ginascreationdolls.com/' + window.location.hash);
+}
+
 const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('.main-nav');
 
