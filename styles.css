@@ -218,8 +218,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
 .hero h1 { font-size: clamp(48px, 5.4vw, 78px); }
 .hero .hero-art { position: absolute; inset: 0 0 0 auto; width: min(100%, 1080px); height: 100%; padding: 0; margin: 0; z-index: 0; }
 .hero .hero-photo-frame { width: 100%; height: 100%; aspect-ratio: auto; border-radius: 0; border: 0; padding: 0; box-shadow: none; }
-.hero .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 70% center; border-radius: 0; }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, #fff4f0 0%, rgba(255,244,240,.97) 24%, rgba(255,244,240,.72) 42%, rgba(255,244,240,0) 62%); }
+.hero .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 70% center; border-radius: 0; filter: brightness(.84) contrast(1.08) saturate(.94); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, #fff4f0 0%, rgba(255,244,240,.94) 24%, rgba(255,244,240,.52) 42%, rgba(255,244,240,0) 58%); }
 .hero .hero-wave { z-index: 2; height: 70px; }
 .hero .eyebrow { color: #99512d; font-size: 12px; }
 @media (min-width: 1700px) { .hero .hero-art { width: 72%; } }
@@ -232,4 +232,45 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
   .hero .hero-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(#f9e7e3 0%, transparent 18%); }
   .hero .hero-photo-frame img { object-position: 75% center; }
   .hero .hero-intro { max-width: 520px; font-size: 16px; }
+}
+
+
+/* Give the final portrait a deliberate full-width spotlight instead of an orphaned grid cell. */
+.gallery-card-featured {
+  align-items: center;
+  background: linear-gradient(135deg, #fff8f6, #f9e0e3);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: grid;
+  gap: clamp(24px, 5vw, 70px);
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(250px, 390px) 1fr;
+  margin-top: 8px;
+  overflow: hidden;
+  padding: clamp(18px, 3vw, 34px);
+}
+.gallery-card-featured .gallery-photo {
+  width: 100%;
+}
+.gallery-card-featured figcaption {
+  color: var(--ink);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(25px, 3vw, 39px);
+  margin: 0;
+}
+@media (max-width: 850px) {
+  .gallery-card-featured {
+    grid-template-columns: minmax(220px, 330px) 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .gallery-card-featured {
+    grid-template-columns: 1fr;
+  }
+  .gallery-card-featured .gallery-photo {
+    max-width: 330px;
+  }
+  .hero .hero-photo-frame img {
+    filter: brightness(.88) contrast(1.06) saturate(.96);
+  }
 }
